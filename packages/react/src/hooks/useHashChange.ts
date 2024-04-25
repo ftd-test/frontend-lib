@@ -1,4 +1,4 @@
-import { addEventListener } from "@zkbridge/dom";
+import { addEventListener } from "@zkbridge/fdn-dom";
 import { useCallback, useEffect } from "react";
 import { useForceUpdate } from "./useForceUpdate";
 type Fn = (hash: string) => void;

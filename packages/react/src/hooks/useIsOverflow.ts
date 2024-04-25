@@ -1,4 +1,4 @@
-import { isOverflow as checkIsOverflow } from "@zkbridge/dom";
+import { isOverflow as checkIsOverflow } from "@zkbridge/fdn-dom";
 import { useCallback, useState } from "react";
 import { useMutationObserver } from "./useMutationObserver";
 

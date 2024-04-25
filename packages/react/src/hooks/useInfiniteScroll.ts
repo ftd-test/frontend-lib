@@ -1,4 +1,4 @@
-import { getTarget, isTouchBottom } from "@zkbridge/dom";
+import { getTarget, isTouchBottom } from "@zkbridge/fdn-dom";
 import { useCallback, useRef } from "react";
 import { useSwitch } from "./useSwitch";
 

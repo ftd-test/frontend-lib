@@ -1,5 +1,5 @@
 {
-  "name": "@zkbridge/utils",
+  "name": "@zkbridge/fdn-utils",
   "version": "1.3.31",
   "description": "utils function",
   "keywords": [
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/NFTConfig/zkbridge-frontend-lib#readme",
   "dependencies": {
-    "@zkbridge/dbg": "workspace:^",
-    "@zkbridge/types": "workspace:^1.1.15",
+    "@zkbridge/fdn-dbg": "workspace:^",
+    "@zkbridge/fdn-types": "workspace:^1.1.15",
     "bignumber.js": "^9.1.2",
     "dayjs": "^1.11.6",
     "numeral": "^2.0.6",

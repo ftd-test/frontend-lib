@@ -1,4 +1,4 @@
-import { rand } from "@zkbridge/utils";
+import { rand } from "@zkbridge/fdn-utils";
 import _ from "lodash";
 import React from "react";
 import { getRandomText, getRandomWord, getRandomWords } from "./text";

@@ -1,4 +1,4 @@
-import { Fn } from "@zkbridge/types";
+import { Fn } from "@zkbridge/fdn-types";
 /**
  *
  * @param root : FiberNode,eg.root._internalRoot

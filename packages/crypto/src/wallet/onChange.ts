@@ -1,4 +1,4 @@
-import { noop } from "@zkbridge/utils";
+import { noop } from "@zkbridge/fdn-utils";
 import { useEffect } from "react";
 import { ethers } from "ethers";
 

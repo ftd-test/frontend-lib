@@ -1,4 +1,4 @@
-import { env } from "@zkbridge/utils";
+import { env } from "@zkbridge/fdn-utils";
 import { ethers } from "ethers";
 import { injectedProviders, WalletName } from "./injectedProviders";
 import { log } from "../utils/dbg";

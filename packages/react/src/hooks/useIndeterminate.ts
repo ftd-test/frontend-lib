@@ -1,4 +1,4 @@
-import { ID, IDable } from "@zkbridge/types";
+import { ID, IDable } from "@zkbridge/fdn-types";
 import { useCallback, useState } from "react";
 
 //allSelected

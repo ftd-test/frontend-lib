@@ -1,5 +1,5 @@
-import { addEventListener, getElement, getTarget } from "@zkbridge/dom";
-import { assert } from "@zkbridge/utils";
+import { addEventListener, getElement, getTarget } from "@zkbridge/fdn-dom";
+import { assert } from "@zkbridge/fdn-utils";
 import { useEffect } from "react";
 
 //auto adjust the height of textarea

@@ -1,4 +1,4 @@
-import { dbg } from '@zkbridge/dbg';
+import { dbg } from '@zkbridge/fdn-dbg';
 import { isDocument, isWindow } from './isWindow';
 
 //

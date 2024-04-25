@@ -1,4 +1,4 @@
-// import { getElement } from "@zkbridge/dom";
+// import { getElement } from "@zkbridge/fdn-dom";
 // import React from "react";
 // import ReactDOM from "react-dom";
 // import { createRoot } from "react-dom/client";

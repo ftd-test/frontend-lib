@@ -1,5 +1,5 @@
 import { rawChainList } from "./rawChainData";
-import type { Find } from "@zkbridge/types";
+import type { Find } from "@zkbridge/fdn-types";
 import { RawChainListType, RawChainType } from "./types";
 
 export type RawChain2Chain<RChain extends RawChainType> = {

@@ -1,6 +1,6 @@
 import { toArray } from '../array';
 import { isNullish } from '../lang';
-import { PlainObject } from '@zkbridge/types';
+import { PlainObject } from '@zkbridge/fdn-types';
 
 export const pick = <T extends PlainObject, K extends keyof T>(
   srcObj: T,

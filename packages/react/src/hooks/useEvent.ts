@@ -1,4 +1,4 @@
-import { Fn } from "@zkbridge/types";
+import { Fn } from "@zkbridge/fdn-types";
 import { useCallback, useRef } from "react";
 export const useEvent = (cb: Fn) => {
   const ref = useRef<Fn>();

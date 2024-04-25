@@ -1,4 +1,4 @@
-import { Fn, IndexedType } from "@zkbridge/types";
+import { Fn, IndexedType } from "@zkbridge/fdn-types";
 import React from "react";
 import { useMyWallet } from "../wallet/useMyWallet";
 

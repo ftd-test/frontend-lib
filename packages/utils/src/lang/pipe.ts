@@ -1,4 +1,4 @@
-import { Fn } from '@zkbridge/types';
+import { Fn } from '@zkbridge/fdn-types';
 
 export const pipe =
   (...fns: Fn[]) =>

@@ -3,7 +3,7 @@ import {
   FormattedTime,
   getLeftTime,
   LEFT_ZERO_TIME,
-} from "@zkbridge/utils";
+} from "@zkbridge/fdn-utils";
 import { useEffect, useRef, useState } from "react";
 
 export const useLeftTime = (target: DateType, interval = 1000) => {

@@ -1,5 +1,5 @@
-import { ID, IDable } from "@zkbridge/types";
-import { assert, isNullish } from "@zkbridge/utils";
+import { ID, IDable } from "@zkbridge/fdn-types";
+import { assert, isNullish } from "@zkbridge/fdn-utils";
 import _ from "lodash";
 import { useCallback } from "react";
 

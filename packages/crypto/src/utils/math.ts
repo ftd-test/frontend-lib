@@ -1,4 +1,4 @@
-import { s } from "@zkbridge/utils";
+import { s } from "@zkbridge/fdn-utils";
 import { BigNumber, ethers } from "ethers";
 export const parseEther = ethers.utils.parseEther;
 export const formatEther = ethers.utils.formatEther;

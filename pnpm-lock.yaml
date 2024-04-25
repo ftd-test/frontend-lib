@@ -47,13 +47,13 @@ importers:
       '@web3modal/ethers5':
         specifier: ^3.2.0
         version: 3.5.7(@types/react@18.2.79)(ethers@5.7.2)(typescript@5.4.5)
-      '@zkbridge/dbg':
+      '@zkbridge/fdn-dbg':
         specifier: workspace:*
         version: link:packages/dbg
-      '@zkbridge/types':
+      '@zkbridge/fdn-types':
         specifier: workspace:*
         version: link:packages/types
-      '@zkbridge/utils':
+      '@zkbridge/fdn-utils':
         specifier: workspace:^1.1.88
         version: link:packages/utils
       ethers:
@@ -177,7 +177,7 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^5.40.1
         version: 5.62.0(eslint@8.57.0)(typescript@5.4.5)
-      '@zkbridge/react':
+      '@zkbridge/fdn-react':
         specifier: workspace:^1.0.11
         version: link:packages/react
       babel-jest:
@@ -267,16 +267,16 @@ importers:
       '@types/lodash.debounce':
         specifier: ^4.0.8
         version: 4.0.9
-      '@zkbridge/dbg':
+      '@zkbridge/fdn-dbg':
         specifier: workspace:^1.1.10
         version: link:../dbg
-      '@zkbridge/react':
+      '@zkbridge/fdn-react':
         specifier: workspace:^1.1.31
         version: link:../react
-      '@zkbridge/types':
+      '@zkbridge/fdn-types':
         specifier: workspace:^1.1.15
         version: link:../types
-      '@zkbridge/utils':
+      '@zkbridge/fdn-utils':
         specifier: workspace:^1.3.31
         version: link:../utils
       lodash.debounce:
@@ -363,19 +363,19 @@ importers:
       '@rollup/plugin-typescript':
         specifier: ^8.5.0
         version: 8.5.0(rollup@2.79.1)(tslib@2.6.2)(typescript@5.4.5)
-      '@zkbridge/chain':
+      '@zkbridge/fdn-chain':
         specifier: workspace:^
         version: link:../chain
-      '@zkbridge/dbg':
+      '@zkbridge/fdn-dbg':
         specifier: workspace:^
         version: link:../dbg
-      '@zkbridge/react':
+      '@zkbridge/fdn-react':
         specifier: workspace:^
         version: link:../react
-      '@zkbridge/types':
+      '@zkbridge/fdn-types':
         specifier: workspace:^
         version: link:../types
-      '@zkbridge/utils':
+      '@zkbridge/fdn-utils':
         specifier: workspace:^
         version: link:../utils
       ethers:
@@ -404,25 +404,25 @@ importers:
 
   packages/dom:
     dependencies:
-      '@zkbridge/dbg':
+      '@zkbridge/fdn-dbg':
         specifier: workspace:^1.1.10
         version: link:../dbg
-      '@zkbridge/utils':
+      '@zkbridge/fdn-utils':
         specifier: workspace:^1.3.31
         version: link:../utils
 
   packages/react:
     dependencies:
-      '@zkbridge/dbg':
+      '@zkbridge/fdn-dbg':
         specifier: workspace:^1.1.10
         version: link:../dbg
-      '@zkbridge/dom':
+      '@zkbridge/fdn-dom':
         specifier: workspace:^1.2.20
         version: link:../dom
-      '@zkbridge/types':
+      '@zkbridge/fdn-types':
         specifier: workspace:^1.1.15
         version: link:../types
-      '@zkbridge/utils':
+      '@zkbridge/fdn-utils':
         specifier: workspace:^1.3.31
         version: link:../utils
       dayjs:
@@ -444,10 +444,10 @@ importers:
 
   packages/router:
     dependencies:
-      '@zkbridge/dom':
+      '@zkbridge/fdn-dom':
         specifier: workspace:^1.2.20
         version: link:../dom
-      '@zkbridge/utils':
+      '@zkbridge/fdn-utils':
         specifier: workspace:^1.3.31
         version: link:../utils
       history:
@@ -469,10 +469,10 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.18.6
         version: 7.24.1(@babel/core@7.24.4)
-      '@zkbridge/types':
+      '@zkbridge/fdn-types':
         specifier: workspace:^1.1.15
         version: link:../types
-      '@zkbridge/utils':
+      '@zkbridge/fdn-utils':
         specifier: workspace:^1.3.31
         version: link:../utils
       rollup:
@@ -512,10 +512,10 @@ importers:
 
   packages/utils:
     dependencies:
-      '@zkbridge/dbg':
+      '@zkbridge/fdn-dbg':
         specifier: workspace:^
         version: link:../dbg
-      '@zkbridge/types':
+      '@zkbridge/fdn-types':
         specifier: workspace:^1.1.15
         version: link:../types
       bignumber.js:

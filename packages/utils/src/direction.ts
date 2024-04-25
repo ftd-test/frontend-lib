@@ -1,4 +1,4 @@
-import type { Direction, Placement } from "@zkbridge/types";
+import type { Direction, Placement } from "@zkbridge/fdn-types";
 
 export const getAntiDirection = (direction: Direction): Direction => {
   switch (direction) {

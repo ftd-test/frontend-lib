@@ -1,4 +1,4 @@
-import { s } from "@zkbridge/utils";
+import { s } from "@zkbridge/fdn-utils";
 import React from "react";
 import { useIsVisible } from "../src";
 export default {

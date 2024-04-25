@@ -1,5 +1,5 @@
 {
-  "name": "@zkbridge/dom",
+  "name": "@zkbridge/fdn-dom",
   "version": "1.2.20",
   "description": "",
   "keywords": [],
@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/NFTConfig/zkbridge-frontend-lib#readme",
   "dependencies": {
-    "@zkbridge/dbg": "workspace:^1.1.10",
-    "@zkbridge/utils": "workspace:^1.3.31"
+    "@zkbridge/fdn-dbg": "workspace:^1.1.10",
+    "@zkbridge/fdn-utils": "workspace:^1.3.31"
   },
   "gitHead": "a080b5bb295baccb3f8477e15c372d7091a6a1cb",
   "type": "module",

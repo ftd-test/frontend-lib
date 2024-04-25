@@ -1,4 +1,4 @@
-import { assert } from '@zkbridge/utils';
+import { assert } from '@zkbridge/fdn-utils';
 
 export function injectCSS(css: string) {
   const id = 'zk-injected-css';

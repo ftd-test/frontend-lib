@@ -1,5 +1,5 @@
 import { ethers, providers } from "ethers";
-import { Chain } from "@zkbridge/chain";
+import { Chain } from "@zkbridge/fdn-chain";
 
 export type ProviderType =
   | ethers.providers.JsonRpcProvider

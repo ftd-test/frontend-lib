@@ -1,4 +1,4 @@
-import { getTotalPage } from "@zkbridge/utils";
+import { getTotalPage } from "@zkbridge/fdn-utils";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useApi } from "./useApi";
 import { BaseRawRes, BaseReq, IAPI } from "./makeApi/type";

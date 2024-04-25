@@ -1,5 +1,5 @@
 import { Chain } from "./types";
-import { toHexString } from "@zkbridge/utils";
+import { toHexString } from "@zkbridge/fdn-utils";
 import { getValidRpc } from "./getValidRpc";
 
 export const toHexChain = (chain: Chain) => ({

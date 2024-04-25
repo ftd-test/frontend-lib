@@ -1,4 +1,4 @@
-import { isNullish, isObject } from '@zkbridge/utils';
+import { isNullish, isObject } from '@zkbridge/fdn-utils';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function isWindow(obj: any): obj is Window {

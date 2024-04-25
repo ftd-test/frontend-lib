@@ -1,10 +1,10 @@
-# `@zkbridge/hooks`
+# `@zkbridge/fdn-hooks`
 
 > TODO: description
 
 ## Usage
 
 ```
-import hooks from '@zkbridge/hooks';
+import hooks from '@zkbridge/fdn-hooks';
 
 ```

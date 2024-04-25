@@ -1,4 +1,4 @@
-import { PlainObject } from "@zkbridge/types";
+import { PlainObject } from "@zkbridge/fdn-types";
 import { assert } from "../assert";
 import { isArray } from "../lang/is";
 

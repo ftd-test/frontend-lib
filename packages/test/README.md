@@ -1,10 +1,10 @@
-# `@zkbridge/test`
+# `@zkbridge/fdn-test`
 
 > TODO: description
 
 ## Usage
 
 ```
-import dom from '@zkbridge/dom';
+import dom from '@zkbridge/fdn-dom';
 
 ```

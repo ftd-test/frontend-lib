@@ -1,4 +1,4 @@
-import { cdbg } from "@zkbridge/dbg";
+import { cdbg } from "@zkbridge/fdn-dbg";
 import { useEffect, useRef } from "react";
 import { getComponentName } from "..";
 

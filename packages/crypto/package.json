@@ -1,5 +1,5 @@
 {
-  "name": "@zkbridge/crypto",
+  "name": "@zkbridge/fdn-crypto",
   "version": "2.0.29",
   "description": "",
   "keywords": [],
@@ -29,11 +29,11 @@
   },
   "homepage": "https://github.com/NFTConfig/zkbridge-frontend-lib#readme",
   "dependencies": {
-    "@zkbridge/chain": "workspace:^",
-    "@zkbridge/dbg": "workspace:^",
-    "@zkbridge/react": "workspace:^",
-    "@zkbridge/types": "workspace:^",
-    "@zkbridge/utils": "workspace:^",
+    "@zkbridge/fdn-chain": "workspace:^",
+    "@zkbridge/fdn-dbg": "workspace:^",
+    "@zkbridge/fdn-react": "workspace:^",
+    "@zkbridge/fdn-types": "workspace:^",
+    "@zkbridge/fdn-utils": "workspace:^",
     "@coinbase/wallet-sdk": "^3.7.1",
     "@cyberlab/cyber-app-sdk": "^2.4.2",
     "@metamask/detect-provider": "^1.2.0",

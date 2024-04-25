@@ -1,4 +1,4 @@
-import { assert, isFunction, isNullish } from "@zkbridge/utils";
+import { assert, isFunction, isNullish } from "@zkbridge/fdn-utils";
 import { stringify } from "qs";
 import { patch } from "./patch";
 import { BaseRawReq, BaseRawRes, BaseReq, BaseRes, IAPI, UserOption } from "./type";

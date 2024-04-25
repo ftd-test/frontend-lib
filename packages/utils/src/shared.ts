@@ -1,7 +1,7 @@
-import { cdbg } from "@zkbridge/dbg";
+import { cdbg } from "@zkbridge/fdn-dbg";
 export const log = cdbg(
-  "@zkbridge/utils →",
+  "@zkbridge/fdn-utils →",
   "color:rgba(0,255,255,1);background:white",
-  "@zkbridge/utils",
+  "@zkbridge/fdn-utils",
   "log"
 );

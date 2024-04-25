@@ -1,5 +1,5 @@
-import { addEventListener, isTouchBottom } from "@zkbridge/dom";
-import { dbg } from "@zkbridge/dbg";
+import { addEventListener, isTouchBottom } from "@zkbridge/fdn-dom";
+import { dbg } from "@zkbridge/fdn-dbg";
 import { useEffect } from "react";
 
 export const useTouchBottom = (el: HTMLElement | null, cb: (e: Event) => Promise<void>) => {

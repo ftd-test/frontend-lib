@@ -1,4 +1,4 @@
-import { PlainObject } from '@zkbridge/types';
+import { PlainObject } from '@zkbridge/fdn-types';
 
 export const assign = (dest: PlainObject, ...srcs: PlainObject[]) => Object.assign(dest, ...srcs);
 

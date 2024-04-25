@@ -1,4 +1,4 @@
-import { IndexedType, PartialBy } from "@zkbridge/types";
+import { IndexedType, PartialBy } from "@zkbridge/fdn-types";
 
 export type Method = "get" | "delete" | "head" | "options" | "post" | "put" | "patch";
 // | 'purge'

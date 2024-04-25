@@ -1,10 +1,10 @@
-import { useLatest } from "@zkbridge/react";
-import { toHexString, waitFor } from "@zkbridge/utils";
+import { useLatest } from "@zkbridge/fdn-react";
+import { toHexString, waitFor } from "@zkbridge/fdn-utils";
 import { BigNumber, ethers } from "ethers";
 import _ from "lodash";
 import { useCallback, useState, useEffect, useMemo } from "react";
-import { Chain } from "@zkbridge/chain";
-import { toHexChain } from "@zkbridge/chain";
+import { Chain } from "@zkbridge/fdn-chain";
+import { toHexChain } from "@zkbridge/fdn-chain";
 import { log } from "../utils";
 
 import {

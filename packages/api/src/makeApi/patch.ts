@@ -6,8 +6,8 @@ import {
   isNumber,
   isObject,
   isString,
-} from "@zkbridge/utils";
-import { PlainObject,IndexedType } from "@zkbridge/types";
+} from "@zkbridge/fdn-utils";
+import { PlainObject,IndexedType } from "@zkbridge/fdn-types";
 
 import _ from "lodash";
 

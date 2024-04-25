@@ -1,4 +1,4 @@
-import { Fn } from "@zkbridge/types";
+import { Fn } from "@zkbridge/fdn-types";
 import { useEvent } from "./useEvent";
 import { useEventListener } from "./useEventListener";
 

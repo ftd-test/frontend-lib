@@ -1,4 +1,4 @@
-import { IDable } from "@zkbridge/types";
+import { IDable } from "@zkbridge/fdn-types";
 
 export const mergeNewItem = <T extends IDable>(origin: T[], newArr: T[]): T[] => {
   const retArr = [...origin];

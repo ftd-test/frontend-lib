@@ -1,4 +1,4 @@
-import { IndexedType } from '@zkbridge/types';
+import { IndexedType } from '@zkbridge/fdn-types';
 import { assign } from './../object/assign';
 
 export type CfgObj<T extends IndexedType<unknown>, K extends string> = {

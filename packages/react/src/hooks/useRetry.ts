@@ -1,4 +1,4 @@
-import { Fn } from "@zkbridge/types";
+import { Fn } from "@zkbridge/fdn-types";
 import { useCallback, useEffect, useRef } from "react";
 import { useLatest } from "./useLatest";
 import { useSwitch } from "./useSwitch";

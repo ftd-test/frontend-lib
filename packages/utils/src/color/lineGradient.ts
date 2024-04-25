@@ -1,4 +1,4 @@
-import { PercentString } from '@zkbridge/types';
+import { PercentString } from '@zkbridge/fdn-types';
 
 export type GradientStop = {
   offset: number | PercentString;

@@ -1,6 +1,6 @@
 import { ID2CHAIN_MAP } from "../src/network";
 import { getValidRpc } from "../src/wallet/getValidRpc";
-import { toHexString } from "@zkbridge/utils";
+import { toHexString } from "@zkbridge/fdn-utils";
 
 describe("test cases", () => {
   it("getValidRpc ", () => {

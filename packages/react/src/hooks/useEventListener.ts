@@ -1,4 +1,4 @@
-import { addEventListener } from "@zkbridge/dom";
+import { addEventListener } from "@zkbridge/fdn-dom";
 import { useEffect } from "react";
 
 export const useEventListener = (

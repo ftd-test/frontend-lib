@@ -6,7 +6,7 @@ import { CyberProvider, isCyberWallet } from "@cyberlab/cyber-app-sdk";
 // import { ParticleConnect } from "@particle-network/connect";
 // import { ParticleProvider } from "@particle-network/provider";
 import { ethers } from "ethers";
-import { ID2CHAIN_MAP, NAME2ID_MAP, Name2CHAIN_MAP, getValidRpc, RawChainType } from "@zkbridge/chain";
+import { ID2CHAIN_MAP, NAME2ID_MAP, Name2CHAIN_MAP, getValidRpc, RawChainType } from "@zkbridge/fdn-chain";
 import { log } from "../utils";
 
 declare let window: any;

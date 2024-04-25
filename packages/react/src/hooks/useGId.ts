@@ -1,4 +1,4 @@
-import { guid } from "@zkbridge/utils";
+import { guid } from "@zkbridge/fdn-utils";
 import { useRef } from "react";
 
 export const useGId = (prefix?: string) => {

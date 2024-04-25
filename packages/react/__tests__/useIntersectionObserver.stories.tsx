@@ -1,4 +1,4 @@
-import { s } from '@zkbridge/utils';
+import { s } from '@zkbridge/fdn-utils';
 import React, { useEffect, useRef, useState } from 'react';
 import { useIntersectionObserver } from '../src';
 export default {

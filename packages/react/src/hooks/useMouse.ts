@@ -1,4 +1,4 @@
-import { addEventListener } from "@zkbridge/dom";
+import { addEventListener } from "@zkbridge/fdn-dom";
 import { useEffect } from "react";
 
 type MouseListener<T extends HTMLElement | Document> = (e: React.MouseEvent<T>) => void;

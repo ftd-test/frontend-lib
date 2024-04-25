@@ -1,5 +1,5 @@
 {
-  "name": "@zkbridge/types",
+  "name": "@zkbridge/fdn-types",
   "version": "1.1.15",
   "description": "",
   "types": "./dist/index.ts",
