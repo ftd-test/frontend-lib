@@ -1,9 +1,15 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "frontend-lib",
   "engines": {
     "node": ">=18",
     "pnpm": ">=3"
+  },
+  "repository": {
+    "url": "https://github.com/ftd-test/frontend-lib",
+    "type": "git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build-storybook": "storybook build",

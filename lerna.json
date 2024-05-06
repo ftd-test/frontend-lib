@@ -5,6 +5,10 @@
   "$schema": "core/lerna/schemas/lerna-schema.json",
   "command": {
     "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "registry": "https://npm.pkg.github.com",
+      "allowBranch": "any"
     },
     "version": {
       "conventionalCommits": true,
@@ -12,9 +16,5 @@
       "message": "chore(release): %s"
     }
   },
-  "ignoreChanges": [
-    "**/__fixtures__/**",
-    "**/__tests__/**",
-    "**/*.md"
-  ]
+  "ignoreChanges": ["**/__fixtures__/**", "**/__tests__/**", "**/*.md"]
 }

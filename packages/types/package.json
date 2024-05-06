@@ -1,6 +1,14 @@
 {
-  "name": "@zkbridge/fdn-types",
-  "version": "1.1.15",
+  "name": "@ftd-test/types",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "url": "https://github.com/ftd-test/frontend-lib.git",
+    "directory": "packages/types",
+    "type": "git"
+  },
+  "version": "1.0.0",
   "description": "",
   "types": "./dist/index.ts",
   "scripts": {
@@ -30,8 +38,5 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.ts"
     }
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

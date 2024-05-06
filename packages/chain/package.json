@@ -1,6 +1,6 @@
 {
   "name": "@zkbridge/fdn-chain",
-  "version": "1.0.21",
+  "version": "1.0.0",
   "description": "",
   "keywords": [],
   "author": "",
@@ -13,10 +13,7 @@
   "files": [
     "dist"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NFTConfig/zkbridge-frontend-lib.git"
-  },
+  "repository": "https://github.com/NFTConfig/zkbridge-frontend-lib.git",
   "scripts": {
     "test": "jest",
     "build": "rollup -c && pnpm type",
