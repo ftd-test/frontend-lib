@@ -1,4 +1,3 @@
-import { isEmpty } from "@zkbridge/fdn-utils";
 import { useContext } from "react";
 import { Web3Context } from "./context";
 

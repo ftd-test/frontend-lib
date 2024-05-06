@@ -1,12 +1,9 @@
-import { useLatest } from "@zkbridge/fdn-react";
-import { toHexString, waitFor } from "@zkbridge/fdn-utils";
 import { BigNumber, ethers } from "ethers";
 import _ from "lodash";
-import { useCallback, useState, useEffect, useMemo } from "react";
-import { Chain } from "@zkbridge/fdn-chain";
+import { useCallback, useState, useEffect, useMemo, useRef } from "react";
+import { Chain, toHexString } from "@zkbridge/fdn-chain";
 import { toHexChain } from "@zkbridge/fdn-chain";
-import { log } from "../utils";
-
+import { waitFor } from "../utils/index";
 import {
   WalletName,
   getInjectedProviderInfo,
@@ -42,11 +39,16 @@ export type WalletType = {
 export const useMyWallet = (initialName: WalletName | undefined): WalletType => {
   const [name, setName] = useState(initialName);
   const [web3provider, setWeb3Provider] = useState<ethers.providers.Web3Provider | undefined>();
+
+  const providerRef = useRef<ethers.providers.Web3Provider>();
+  // 下次渲染的时候，可以做个比较，看current和web3provider是否发送了变化
+  providerRef.current = web3provider;
+
   const account = useAccount(web3provider);
 
   useEffect(() => {
     if (initialName) {
-      log("===>wallet name changed to", initialName);
+      console.log("===>wallet name changed to", initialName);
       const info = getInjectedProviderInfo(initialName);
 
       if (info.needConnectMobileApp?.()) {
@@ -60,10 +62,9 @@ export const useMyWallet = (initialName: WalletName | undefined): WalletType => 
       }
     }
   }, [initialName]);
-  const providerRef = useLatest(web3provider);
 
   useOnChainChanged(web3provider, async (chainId: number) => {
-    log("===>chain changed. new chainId=", chainId);
+    console.log("===>chain changed. new chainId=", chainId);
     if (!name) {
       return;
     }
@@ -75,7 +76,7 @@ export const useMyWallet = (initialName: WalletName | undefined): WalletType => 
     if (!name) {
       return;
     }
-    log("===>on disconnect event");
+    console.log("===>on disconnect event");
     const info = getInjectedProviderInfo(name);
     if (info?.needConnectMobileApp?.()) {
       // await info?.disconnect?.();
@@ -85,7 +86,7 @@ export const useMyWallet = (initialName: WalletName | undefined): WalletType => 
 
   const addNetwork = useCallback(
     async (chain: Chain) => {
-      log("[addNetwork] chain=", chain);
+      console.log("[addNetwork] chain=", chain);
       if (!web3provider) {
         throw new Error("provider is not ready");
       }
@@ -98,11 +99,7 @@ export const useMyWallet = (initialName: WalletName | undefined): WalletType => 
   //connect to network
   const connectMobileAppIfNeeded = useCallback(async (walletName: WalletName) => {
     const injectedProviderInfo = getInjectedProviderInfo(walletName);
-    if (
-      injectedProviderInfo.needConnectMobileApp?.()
-      // &&
-      // !(await injectedProviderInfo.isConnectedMobileApp?.())
-    ) {
+    if (injectedProviderInfo.needConnectMobileApp?.()) {
       await injectedProviderInfo.connectMobileApp?.();
     }
   }, []);
@@ -142,15 +139,15 @@ export const useMyWallet = (initialName: WalletName | undefined): WalletType => 
       }
       if (!account) {
         await connectAccount();
-        // await waitFor(() => !!accountRef.current);
       }
       try {
         // 获取当前的chainId
-        const chainId = await (await web3provider.getNetwork()).chainId;
+        const network = await web3provider.getNetwork();
+        const chainId = network.chainId;
         if (chainId === chain.chainId) {
           return web3provider;
         }
-        log("[switchNetwork] chain=", chain);
+        console.log("[switchNetwork] chain=", chain);
         await web3provider.send("wallet_switchEthereumChain", [
           { chainId: toHexString(chain.chainId) },
         ]);
@@ -163,6 +160,7 @@ export const useMyWallet = (initialName: WalletName | undefined): WalletType => 
         }
       }
       // 等待ChainChanged事件完成
+      // todo 这个原理是啥？
       await waitFor(() => providerRef.current !== web3provider);
       return providerRef.current!;
     },

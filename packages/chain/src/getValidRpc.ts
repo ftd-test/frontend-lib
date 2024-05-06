@@ -1,5 +1,4 @@
 import type { Chain } from "./types";
-import { log } from "./log";
 
 export const getValidRpc = (chain: Chain, httpOnly = true) => {
   if (chain.shortName === "eth") {
@@ -16,7 +15,7 @@ export const getValidRpc = (chain: Chain, httpOnly = true) => {
     e => !e.includes("API_KEY") && !e.includes("${") && (httpOnly ? e.startsWith("http") : true)
   );
   if (!rpc) {
-    log("chain=", chain.shortName, "has no rpc");
+    console.log("chain=", chain.shortName, "has no rpc");
     return "";
   }
   return rpc;

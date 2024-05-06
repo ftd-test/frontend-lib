@@ -6,8 +6,13 @@ import { CyberProvider, isCyberWallet } from "@cyberlab/cyber-app-sdk";
 // import { ParticleConnect } from "@particle-network/connect";
 // import { ParticleProvider } from "@particle-network/provider";
 import { ethers } from "ethers";
-import { ID2CHAIN_MAP, NAME2ID_MAP, Name2CHAIN_MAP, getValidRpc, RawChainType } from "@zkbridge/fdn-chain";
-import { log } from "../utils";
+import {
+  ID2CHAIN_MAP,
+  NAME2ID_MAP,
+  Name2CHAIN_MAP,
+  getValidRpc,
+  RawChainType,
+} from "@zkbridge/fdn-chain";
 
 declare let window: any;
 export type WalletName =
@@ -203,7 +208,7 @@ export const injectedProviders: InjectedProviderMap = {
       return provider.connected;
     },
     getProvider: async () => {
-      log("====>getprovider walletconnect");
+      console.log("====>getprovider walletconnect");
       const walletConnectName = "walletConnect";
       if (providerCache[walletConnectName]) {
         return providerCache[walletConnectName];
@@ -252,7 +257,7 @@ export const injectedProviders: InjectedProviderMap = {
       try {
         await provider.connect();
       } catch (e: any) {
-        log("connectMobileApp error:", e);
+        console.log("connectMobileApp error:", e);
         switch (e.code) {
           //user reject
           case 100001:
@@ -311,7 +316,7 @@ export const getInjectedProvider = async (name: WalletName, chainId?: number) =>
   if (name && injectedProviders[name]) {
     const p = await injectedProviders[name].getProvider(chainId);
     name === "walletConnect" &&
-      log("methods:", p?.signer?.rpcProviders?.eip155?.namespace?.methods);
+      console.log("methods:", p?.signer?.rpcProviders?.eip155?.namespace?.methods);
     return p;
   }
   return undefined;

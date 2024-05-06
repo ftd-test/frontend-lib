@@ -1,14 +1,12 @@
-import { env } from "@zkbridge/fdn-utils";
-import { ethers } from "ethers";
+import { uaHelper } from "../utils/ua";
 import { injectedProviders, WalletName } from "./injectedProviders";
-import { log } from "../utils/dbg";
 
 export const jump2NativeAppOrDlPage = (name: WalletName = "metamask") => {
-  if (env.mobile) {
+  if (uaHelper.isMobile()) {
     const target = injectedProviders[name].getDeeplink(window.location.href);
-    log("jump2to", target);
+    console.log("jump2to", target);
     window.open(target, "_blank");
-  } else if (!env.mobile && !env.tablet) {
+  } else if (uaHelper.isBrowser()) {
     window.open(injectedProviders[name].pcDownloadUrl, "_blank");
   }
 };

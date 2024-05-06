@@ -37,6 +37,9 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "dependencies": {
+    "@zkbridge/fdn-types": "workspace:*"
+  },
   "publishConfig": {
     "access": "public"
   }

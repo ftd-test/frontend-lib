@@ -1,60 +1,54 @@
-import { noop } from "@zkbridge/fdn-utils";
+// @ts-nocheck
+
 import { useEffect } from "react";
 import { ethers } from "ethers";
 
+const noop = () => {
+  // do nothing
+};
 export const useOnChainChanged = (
-  provider: ethers.providers.Web3Provider | undefined,
+  webProvider: ethers.providers.Web3Provider | undefined,
   cb: (chaindId: number) => void
 ) => {
   useEffect(() => {
-    if (!provider?.provider) {
+    if (!webProvider || !webProvider.provider) {
       return;
     }
-    // provider.on("network", (newNetwork, oldNetwork) => {
-    //   console.log("⽹络切换，oldNetwork：", oldNetwork, "newNetwork:", newNetwork);
-    // 这里不能回调! 因为cb里又setWebProvider, 无限循环了
-    // cb(newNetwork.chainId);
-    // });
-    //@ts-ignore
-    provider.provider?.on("chainChanged", cb) || noop; // metamask会触发这个chainChanged event
-    // if (provider.provider.isBybit) {
-    // event 'networkChanged' is deprecated and may be removed in the future. Use 'chainChanged' instead.
-    //   provider.provider?.on("networkChanged", cb) || noop;
-    // }
+    // 监听chain的变化
+    webProvider.provider?.on("chainChanged", cb);
     return () => {
-      // provider.off("network");
       //@ts-ignore
-      const off = (provider?.provider?.off || provider?.provider?.removeListener || noop).bind(
-        provider?.provider
-      );
+      const off = (
+        webProvider?.provider?.off ||
+        webProvider?.provider?.removeListener ||
+        noop
+      ).bind(webProvider?.provider);
       off("chainChanged", cb);
-      // off("networkChanged", cb);
     };
-    //
-  }, [cb, provider?.provider]);
+  }, [cb, webProvider, webProvider?.provider]);
 };
 
 export const useOnAccountChanged = (
-  provider: ethers.providers.Web3Provider | undefined,
+  web3Provider: ethers.providers.Web3Provider | undefined,
   cb: (accounts: string[]) => void
 ) => {
   useEffect(() => {
-    if (!provider?.provider) {
+    if (!web3Provider?.provider) {
       return;
     }
-    //@ts-ignore
-    const on = (provider?.provider?.on || provider?.provider?.addListener || noop).bind(
-      provider?.provider
+    const on = (web3Provider?.provider?.on || web3Provider?.provider?.addListener || noop).bind(
+      web3Provider?.provider
     );
     on("accountsChanged", cb);
     return () => {
-      //@ts-ignore
-      const off = (provider?.provider?.off || provider?.provider?.removeListener || noop).bind(
-        provider?.provider
-      );
+      const off = (
+        web3Provider?.provider?.off ||
+        web3Provider?.provider?.removeListener ||
+        noop
+      ).bind(web3Provider?.provider);
       off("accountsChanged", cb);
     };
-  }, [cb, provider, provider?.provider]);
+  }, [cb, web3Provider, web3Provider?.provider]);
 };
 
 export const useOnDisconnect = (
@@ -65,16 +59,16 @@ export const useOnDisconnect = (
     if (!web3provider?.provider) {
       return;
     }
-    //@ts-ignore
     const on = (web3provider?.provider?.on || web3provider?.provider?.addListener || noop).bind(
       web3provider?.provider
     );
     on("disconnect", cb);
     return () => {
-      const off = //@ts-ignore
-        (web3provider?.provider?.off || web3provider?.provider?.removeListener || noop).bind(
-          web3provider?.provider
-        );
+      const off = (
+        web3provider?.provider?.off ||
+        web3provider?.provider?.removeListener ||
+        noop
+      ).bind(web3provider?.provider);
       off("disconnect", cb);
     };
   }, [cb, web3provider, web3provider?.provider]);

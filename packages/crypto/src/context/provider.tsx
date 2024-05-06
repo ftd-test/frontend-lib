@@ -1,5 +1,4 @@
 import React from "react";
-import { log } from "../utils";
 import { useMyWallet, WalletName } from "../wallet";
 import { Web3Context } from "./context";
 
@@ -11,7 +10,7 @@ type Props = {
 export const Web3Provider = (props: Props) => {
   const { value, ...restProps } = props;
   const wallet = useMyWallet(value);
-  log("===>web3provider refreshed-1");
+  console.log("===>web3provider refreshed-1");
 
   //@ts-ignore
   globalThis.__wallet = wallet;
